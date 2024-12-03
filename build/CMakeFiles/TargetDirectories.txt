@@ -1,3 +1,0 @@
-/root/Image_filtering/build/CMakeFiles/image_filtering.dir
-/root/Image_filtering/build/CMakeFiles/edit_cache.dir
-/root/Image_filtering/build/CMakeFiles/rebuild_cache.dir
