@@ -3,9 +3,9 @@
 Image Filters
 
 ## Team Members
-Junle Li
-Shuai Chen
-Mingxuan Zhao
+- Junle Li
+- Shuai Chen
+- Mingxuan Zhao
 
 ## Description
 Welcome to the Group 90 Image Filtering System! This application provides a variety of image processing filters, such as High-pass Filter, Low-pass Filter, Bandpass Filter, Gaussian Filter and Laplace Filter. Users can use different filtering methods by entering different numbers. The final program will display both the original image and the filtered image.
@@ -19,7 +19,7 @@ Welcome to the Group 90 Image Filtering System! This application provides a vari
 ## Requirements
 - Make sure you have opencv installed on Linux
 - Make sure Cmake and C++ are installed
-We recommand the initial setting Parameters as follows:
+- We recommand the initial setting Parameters as follows:
 1. High-pass Filter(Sigma: 20)
 2. Low-pass Filter(Sigma: 20)
 3. Bandpass Filter(Sigma_low: 20  Sigma_high: 150)
@@ -49,8 +49,8 @@ The image processing system works as follows:
     
 2.  You will then be prompted to select a filter to apply to the image:
     
-        - High-pass Filter
-    	- Low-pass Filter
+    - High-pass Filter
+    - Low-pass Filter
 	- Bandpass Filter
 	- Gaussian Filter
 	- Laplace Filter
