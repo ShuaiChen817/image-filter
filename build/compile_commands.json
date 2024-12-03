@@ -1,0 +1,20 @@
+[
+{
+  "directory": "/root/Image_filtering/build",
+  "command": "/usr/bin/g++ -isystem /usr/local/include/opencv4 -g -std=gnu++17 -o CMakeFiles/image_filtering.dir/src/main.cpp.o -c /root/Image_filtering/src/main.cpp",
+  "file": "/root/Image_filtering/src/main.cpp",
+  "output": "CMakeFiles/image_filtering.dir/src/main.cpp.o"
+},
+{
+  "directory": "/root/Image_filtering/build",
+  "command": "/usr/bin/g++ -isystem /usr/local/include/opencv4 -g -std=gnu++17 -o CMakeFiles/image_filtering.dir/src/UserMenu.cpp.o -c /root/Image_filtering/src/UserMenu.cpp",
+  "file": "/root/Image_filtering/src/UserMenu.cpp",
+  "output": "CMakeFiles/image_filtering.dir/src/UserMenu.cpp.o"
+},
+{
+  "directory": "/root/Image_filtering/build",
+  "command": "/usr/bin/g++ -isystem /usr/local/include/opencv4 -g -std=gnu++17 -o CMakeFiles/image_filtering.dir/src/filters.cpp.o -c /root/Image_filtering/src/filters.cpp",
+  "file": "/root/Image_filtering/src/filters.cpp",
+  "output": "CMakeFiles/image_filtering.dir/src/filters.cpp.o"
+}
+]
