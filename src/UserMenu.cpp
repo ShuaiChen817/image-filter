@@ -1,34 +1,40 @@
 #include "UserMenu.h"
 
 namespace Menu {
-
-// Display the menu options
+// Define a function to display the menu
 void displayMenu() {
-    std::cout << "************ Image Filtering System! ************\n";
-    std::cout << "************ Please select a filter method: ************\n";
-    std::cout << "************ 1. High-pass Filter ************\n";
-    std::cout << "************ 2. Low-pass Filter ************\n";
-    std::cout << "************ 3. Bandpass Filter ************\n";
-    std::cout << "************ 4. Gaussian Filter ************\n";
-    std::cout << "************ 5. Laplace Filter ************\n";
-    std::cout << "************ 6. Exit the system ************\n";
-    std::cout << "************ Enter your choice: ************" << std::endl;
+  std::cout << "************ Start a filter process! ************\n";
+  std::cout << "************ Please select a filter method: ************\n";
+  std::cout << "************ 1. Blurring ************\n";
+  std::cout << "************ 2. NoiseRemoval ************\n";
+  std::cout << "************ 3. EdgeDetection ************\n";
+  std::cout << "************ 4. ImageSharpening ************\n";
+  std::cout << "************ 5. CombineFilter ************\n";
+  std::cout << "************ 6. Exit the system ************\n";
+  std::cout << "************ Enter your choice: ************" << std::endl;
 }
 
-// Get the input image path from the user
 std::string getInputImagePath() {
-    std::string inputPath;
-    std::cout << "Enter the path to your image (or press Enter to use default): ";
-    std::getline(std::cin, inputPath);
-    if (inputPath.empty()) {
-        inputPath = "images_input/default.jpg"; // Default input path
-    }
-    return inputPath;
+  std::string inputPath;
+  std::cout << "Enter the input image path or press enter to use default image "
+               "('../images_input/deafault.jpg'):\n";
+  std::getline(std::cin, inputPath);
+  if (inputPath.empty()) {
+    inputPath = "../images_input/default.jpg"; // default path
+  }
+  return inputPath;
 }
 
-// Get the output image path from the user
 std::string getOutputImagePath() {
-    return "images_output/filtered_image.jpg"; // Default output path
+  std::string outputPath;
+  std::cout
+      << "Enter the output image directory or press enter to use default path"
+         "('../images_output/'):\n";
+  std::getline(std::cin, outputPath); // Use getline to read an entire line
+  if (outputPath.empty()) {
+    outputPath = "../images_output/"; // default path
+  }
+  return outputPath;
 }
 
 } // namespace Menu

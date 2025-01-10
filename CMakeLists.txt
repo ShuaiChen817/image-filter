@@ -1,25 +1,35 @@
-# Minimum CMake version required
-cmake_minimum_required(VERSION 3.10)
-
-# Project name
-project(ImageFiltering)
-
-# Set C++ standard
+cmake_minimum_required(VERSION 3.0)
+project(main)
+# Set the C++ standard
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED True)
+set(CMAKE_CXX_STANDARD_REQUIRED TRUE)
+set (CMAKE_CXX_FLAGS "-O2")
 
-# Find OpenCV package
+# Add this line for gprof profiling
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pg")
+
+# Find the OpenCV package
 find_package(OpenCV REQUIRED)
 
-# Include directories for headers
-include_directories(${OpenCV_INCLUDE_DIRS})
+# If OpenCV is found, output status messages and include directories
+if(OpenCV_FOUND)
+    message(STATUS "OpenCV library status:")
+    message(STATUS "    config: ${OpenCV_DIR}")
+    message(STATUS "    version: ${OpenCV_VERSION}")
+    message(STATUS "    libraries: ${OpenCV_LIBS}")
+    message(STATUS "    include path: ${OpenCV_INCLUDE_DIRS}")
+    
+    # Add OpenCV header file paths to the project
+    include_directories(${OpenCV_INCLUDE_DIRS})
+else()
+    message(FATAL_ERROR "OpenCV library not found")
+endif()
 
-# Add executable
-add_executable(image_filtering
-    src/main.cpp
-    src/UserMenu.cpp
-    src/filters.cpp
-)
+file(GLOB SRC_LIST "./src/*.cpp")
 
-# Link OpenCV libraries
-target_link_libraries(image_filtering ${OpenCV_LIBS})
+include_directories(./include)
+
+add_executable(main main.cpp ${SRC_LIST})
+
+# Link the OpenCV library
+target_link_libraries(main ${OpenCV_LIBS})
