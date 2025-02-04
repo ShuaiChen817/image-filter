@@ -26,6 +26,7 @@ Welcome to the Group 90 Image Filtering System! This application provides a vari
 `git clone https://gitlab.lrz.de/advprog2024/90.git`
 2. If you want to recompile the program, delete the build folder and execute the following command
 ```
+first you need creat a build file if you donnot have 
 cd /path/to/your/project/build  # make sure you are in the build file
 rm -rf *                        # delete all files in build 
 cmake ..                        

@@ -82,27 +82,8 @@ int main() {
             default:
                 std::cout << "Invalid choice. Please enter a number from 1 to 6.\n";
         }
-
-        std::string input;
-        std::cout << "Do you want to continue system? (Y/n): " << std::endl;
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::getline(std::cin, input);
-
-        if (input.empty()) {
-            std::cout << "No input entered. Using default value 'n'." << std::endl;
-        } else {
-            userInput = input[0];
-            if (userInput == 'y' || userInput == 'Y') {
-                std::cout << "You entered: " << userInput << std::endl;
-            } else if (userInput == 'n' || userInput == 'N') {
-                std::cout << "You entered: " << userInput << ", system will be closed!" << std::endl;
-            } else {
-                std::cout << "You entered an incorrect value, we will use the default value(n), system will be closed! " << std::endl;
-            }
-        }
-
-    } while (userInput == 'y' || userInput == 'Y');
-
+    }while (userInput == 'y' || userInput == 'Y');
+    
     return 0;
 }
+        

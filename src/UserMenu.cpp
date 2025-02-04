@@ -23,18 +23,7 @@ std::string getInputImagePath() {
     inputPath = "../images_input/default.jpg"; // default path
   }
   return inputPath;
-}
 
-std::string getOutputImagePath() {
-  std::string outputPath;
-  std::cout
-      << "Enter the output image directory or press enter to use default path"
-         "('../images_output/'):\n";
-  std::getline(std::cin, outputPath); // Use getline to read an entire line
-  if (outputPath.empty()) {
-    outputPath = "../images_output/"; // default path
-  }
-  return outputPath;
 }
 
 } // namespace Menu

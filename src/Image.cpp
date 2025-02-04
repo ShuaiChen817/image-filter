@@ -79,33 +79,3 @@ void Image::addSaltAndPepperNoise(double noiseRatio, int blackValue,
 }
 
 void Image::load(const std::string &path) { _image = cv::imread(path); }
-
-void Image::save() const {
-  // Ask the user if they want to save the image
-  std::cout << "Do you want to save the image? (y/n): ";
-  char userInput;
-  std::cin >> userInput;
-
-  if (userInput == 'y' || userInput == 'Y') {
-    std::string outputPath = Menu::getOutputImagePath();
-    std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
-    // User chooses to save the image
-    std::string fileName;
-    std::cout << "Enter the file name (e.g., 'myimage'): ";
-    // input imagename
-    std::cin >> fileName;
-
-    std::string filePath = outputPath + fileName + ".jpg";
-    bool isSaved = cv::imwrite(filePath, _image);
-
-    if (isSaved) {
-      std::cout << "Image saved successfully at " << filePath << std::endl;
-    } else {
-      std::cout << "Error: Image not saved!" << std::endl;
-    }
-  } else {
-    // User chooses not to save
-    std::cout << "Image not saved." << std::endl;
-  }
-}
