@@ -18,7 +18,6 @@ public:
   // Pure virtual function for loading images from a path
   virtual void load(const std::string &path) = 0;
 
-  virtual void save() const = 0;
 
   cv::Mat getter();
 

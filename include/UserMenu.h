@@ -6,6 +6,5 @@ namespace Menu {
 void displayMenu();
 
 std::string getInputImagePath();
-std::string getOutputImagePath();
 
 } // namespace Menu

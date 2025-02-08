@@ -25,7 +25,6 @@ public:
 
   void load(const std::string &path) override;
 
-  void save() const override;
 };
 
 #endif // IMAGE_HPP
